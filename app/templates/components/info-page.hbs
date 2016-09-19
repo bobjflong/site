@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="seven columns">
+    {{sanitize-html model.description "strict"}}
+  </div>
+
+  <div class="five columns">
+    {{#each model.links as |link|}}
+      <p>
+        <a class="button" href="{{link.href}}">{{link.title}}</a><br>
+        <small>{{link.description}}</small>
+      </p>
+    {{/each}}
+  </div>
+</div>
